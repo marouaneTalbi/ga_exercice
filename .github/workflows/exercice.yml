@@ -1,0 +1,24 @@
+name: correction
+
+on:
+    
+    # push:
+    #     branches:
+    #         - dev
+
+    push:
+        branches:
+            - "staging"
+
+    workflow_dispatch: 
+jobs:
+    build:
+        runs-on: ubuntu-latest
+        steps:
+            - uses: actions/checkout@v3
+
+    deploy:
+        if: github.event_name != 'pull_request'
+        runs-on: ubuntu-latest
+        steps:
+            - uses: actions/checkout@v3
