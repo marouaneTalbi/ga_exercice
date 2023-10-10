@@ -7,6 +7,10 @@ on:
     #         - dev
 
     
+    # push:
+    #     branches:
+    #         - "!staging"
+
     push:
         branches:
             - "!staging"
@@ -19,7 +23,7 @@ jobs:
             - uses: actions/checkout@v3
 
     deploy:
-        
+
         if: github.event_name != 'pull_request'
         runs-on: ubuntu-latest
         steps:
