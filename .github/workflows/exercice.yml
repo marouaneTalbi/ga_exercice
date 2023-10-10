@@ -1,9 +1,20 @@
 name: correction
 
 on:
+    
+    # push:
+    #     branches:
+    #         - dev
+
+
+    # push:
+    #     branches:
+    #         - "!staging"
+
     push:
         branches:
-            - dev
+            - "feat/**"
+
     workflow_dispatch: 
 jobs:
     build:
