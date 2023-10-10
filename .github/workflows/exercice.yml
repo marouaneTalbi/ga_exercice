@@ -1,0 +1,6 @@
+name: correction
+
+on:
+    push:
+        branches:
+            - dev
