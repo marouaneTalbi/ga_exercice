@@ -11,11 +11,15 @@ on:
     #     branches:
     #         - "!staging"
 
+    # push:
+    #     branches:
+    #         - "feat/**"
+    
     push:
         branches:
-            - "feat/**"
+            - "**.ts"
 
-            
+
 
     workflow_dispatch: 
 jobs:
