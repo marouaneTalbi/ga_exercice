@@ -6,9 +6,21 @@ on:
     #     branches:
     #         - dev
 
+
+    # push:
+    #     branches:
+    #         - "!staging"
+
+    # push:
+    #     branches:
+    #         - "feat/**"
+    
     push:
         branches:
-            - "staging"
+            - "**.ts"
+
+
+
 
     workflow_dispatch: 
 jobs:
