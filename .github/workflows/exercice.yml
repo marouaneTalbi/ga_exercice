@@ -3,21 +3,28 @@ name: correction
 on:
     
     # push:
-    #     branches:
+
+        
+    #     branches: //When you have a push on the branch "dev" only
     #         - dev
 
 
     # push:
-    #     branches:
+    #     branches: //When you have a push on any branch except "staging"
     #         - "!staging"
 
-    # push:
-    #     branches:
-    #         - "feat/**"
-    
     push:
-        branches:
-            - "**.ts"
+        branches: #When you have a push on any branch where the name starts with "feat"
+            - "feat/**"
+
+    # push:
+    #     paths: //When only the files with a ts extension have been modified
+    #         - "**.ts"
+
+
+    # push:
+    #     paths: #When a specific folder have been modified
+    #         - "**.ts"
 
 
 
